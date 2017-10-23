@@ -11,33 +11,22 @@ class PunkService
     @uri = ""
   end
 
-  # &&&
   def parameters(options = {})
     if options.empty? == false
+      num_of_keys = 0
       @uri << "?"
-      @uri
-    options.each do |k, v|
-      @uri << "#{k} = #{v}"
-      query_response = JSON.parse(self.class.get('/beers#{uri}').body)
-      response[0]
+    options.each do |k,v|
+      @uri << "#{k}=#{v}"
+      while num_of_keys < options.keys.length - 1
+        @uri << "&"
+        num_of_keys += 1
+      end
+      query = JSON.parse(self.class.get("/beers#{@uri}").body)
+      query[0]
       end
     else
-      parameters = JSON.parse(self.class.get('/beers').body)
+      parameters = JSON.parse(self.class.get("/beers").body)
       parameters[0]
-    end
-  end
-
-  def pagination(options = {})
-    if options.empty? == false
-      @uri << "?"
-    options.each do |k, v|
-      @uri << "#{k} = #{v}"
-      query_response = JSON.parse(self.class.get('/beers#{uri}').body)
-      response[0]
-      end
-    else
-      pagination = JSON.parse(self.class.get('/beers').body)
-      pagination[0]
     end
   end
 
@@ -57,10 +46,9 @@ class PunkService
 
 end
 
-punk_service = PunkService.new
+ps = PunkService.new
 # p punk_service.all_beers
 # p punk_service.single_beer(1)
 # p punk_service.random_beer
-# p punk_service.pagination
-punk_service.parameters({"yeast" => "american", "abv" => 22})
-puts punk_service.all_beers
+ps.parameters({"abv" => 5.2, "ibu" => 38})
+p ps.parameters

@@ -4,7 +4,7 @@ describe "punk api" do
 
   before(:each) do
     service = PunkService.new
-    @api_tests = service.single_beer(1)
+    @api_tests = service.single_beer(5)
   end
 
   # it "Alcohol By Volume must be greater than 1 and less than 55" do
