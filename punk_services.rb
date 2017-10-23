@@ -30,6 +30,9 @@ class PunkService
     end
   end
 
+  def pagination
+  end
+
   def all_beers
     JSON.parse(self.class.get("/beers").body)
   end
