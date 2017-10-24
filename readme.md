@@ -1,4 +1,6 @@
-#Punk API Tests - Beer Tests
+
+# Punk API Tests - Beer Tests
+
 The main objective for this project was to test the Punk API utilising the JSON, HTTParty and RSpec Ruby gems. This project demonstrates simple tests for particular hashes for all alcoholic beverages within the API, and also for single and randomised beverages.
 
 Punk API is a free-to-use application programming interface that enables programmers to search and filter through the official API for Brewdog's DIY Dog.
