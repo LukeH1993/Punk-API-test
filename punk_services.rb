@@ -5,6 +5,8 @@ class PunkService
 
   include HTTParty
 
+  attr_accessor :uri
+
   base_uri 'https://api.punkapi.com/v2'
 
   def initialize
@@ -53,5 +55,5 @@ ps = PunkService.new
 # p punk_service.all_beers
 # p punk_service.single_beer(1)
 # p punk_service.random_beer
-ps.parameters({"abv" => 5.2, "ibu" => 38})
-p ps.parameters
+ps.parameters({"yeast" => "american", "first_brewed" => "11/2015"})
+p ps.uri
