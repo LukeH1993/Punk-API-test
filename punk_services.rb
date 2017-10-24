@@ -49,8 +49,8 @@ class PunkService
 end
 
 ps = PunkService.new
-# p ps.all_beers
+p ps.all_beers
 # p ps.single_beer(1)
 # p ps.random_beer
-ps.parameters({"yeast" => "american", "abv_gt" => 4})
-p ps.uri
+# ps.parameters({"yeast" => "american", "abv_gt" => 4})
+# p ps.uri
