@@ -32,9 +32,6 @@ class PunkService
     end
   end
 
-  def pagination
-  end
-
   def all_beers
     JSON.parse(self.class.get("/beers").body)
   end
@@ -52,8 +49,8 @@ class PunkService
 end
 
 ps = PunkService.new
-# p punk_service.all_beers
-# p punk_service.single_beer(1)
-# p punk_service.random_beer
-ps.parameters({"yeast" => "american", "first_brewed" => "11/2015"})
+# p ps.all_beers
+# p ps.single_beer(1)
+# p ps.random_beer
+ps.parameters({"yeast" => "american", "abv_gt" => 4})
 p ps.uri
