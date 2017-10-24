@@ -94,4 +94,3 @@ context "Random Beer Test" do
   end
 
 end
-end
