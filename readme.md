@@ -10,6 +10,12 @@ Punk API Tests requires the HTTParty gem and the RSpec gem and the JSON gem.
 
 * Ruby version 2.0.0 or higher
 
+Run the following commands in your terminal to get the required gem dependencies:
+
+* gem install httparty
+* gem install rspec
+* gem install json
+
 ### Gems
 * HTTParty
 * RSpec
